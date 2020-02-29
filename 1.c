@@ -24,6 +24,7 @@ int main() {
     for (int i = 0; i < returnSize; i++)
         i == returnSize - 1 ? printf("%d", ans[i]) : printf("%d, ", ans[i]);
     printf(" ]\n");
-    free(ans);
+    if(ans)
+        free(ans);
     return 0;
 }
