@@ -62,23 +62,25 @@ int main() {
         else
             prev = prev->next = curr;
     }
+    printf("l1: ");
     curr = l1;
     while (curr) {
         printf("%d ", curr->val);
         prev = curr;
         curr = curr->next;
     }
-    puts("");
+    printf("\nl2: ");
     curr = l2;
     while (curr) {
         printf("%d ", curr->val);
         prev = curr;
         curr = curr->next;
     }
-    puts("");
+    printf("\n");
 
     struct ListNode *ans = mergeTwoLists(l1, l2);
 
+    printf("ans: ");
     curr = ans;
     while (curr) {
         printf("%d ", curr->val);
@@ -87,5 +89,6 @@ int main() {
         if (prev)
             free(prev);
     }
+    printf("\n");
     return 0;
 }
