@@ -8,11 +8,12 @@ int searchInsert(int *nums, int numsSize, int target) {
         if (target <= nums[i])
             return i;
     }
-    // last position
+    // not found
     return numsSize;
 }
 
 int main() {
     int nums[] = {1, 3, 5, 6};
     printf("ans: %d\n", searchInsert((int *)&nums, 4, 0));
+    return 0;
 }
